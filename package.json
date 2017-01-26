@@ -32,7 +32,8 @@
 		"blahblahblah": "./cli.js"
 	},
 	"scripts": {
-		"test": "xo && nyc ava --verbose"
+		"test": "xo && nyc ava --verbose",
+		"report": "./node_modules/.bin/nyc report --reporter=html"
 	},
 	"xo": {
 		"env": {

@@ -53,6 +53,13 @@
     ],
     "rules": {
       "space-before-function-paren": "off",
+	    "no-multiple-empty-lines": [
+		    "error",
+		    {
+			    "max": 2,
+			    "maxEOF": 1
+		    }
+	    ],
       "unicorn/filename-case": [
         "error",
         {

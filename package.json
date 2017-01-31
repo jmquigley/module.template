@@ -28,6 +28,7 @@
     "ava": "^0.17.0",
     "coveralls": "^2.11.15",
     "nyc": "^10.1.2",
+    "util.pkgwrap": "0.0.2",
     "xo": "^0.17.1"
   },
   "main": "index.js",
@@ -35,9 +36,10 @@
     "blahblahblah": "./cli.js"
   },
   "scripts": {
-    "postinstall": "node cmd.js --postinstall",
-    "test": "node cmd.js --testing",
-    "report": "node cmd.js --reporting"
+    "postinstall": "pkgwrap --postinstall",
+    "test": "pkgwrap --testing",
+    "report": "pkgwrap --reporting",
+    "coverage": "pkgwrap --coverage"
   },
   "xo": {
     "env": {
@@ -53,13 +55,13 @@
     ],
     "rules": {
       "space-before-function-paren": "off",
-	    "no-multiple-empty-lines": [
-		    "error",
-		    {
-			    "max": 2,
-			    "maxEOF": 1
-		    }
-	    ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2,
+          "maxEOF": 1
+        }
+      ],
       "unicorn/filename-case": [
         "error",
         {

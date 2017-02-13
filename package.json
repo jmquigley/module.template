@@ -13,7 +13,7 @@
     "url": "https://github.com/jmquigley/module.template/issues"
   },
   "engines": {
-    "node": ">=7.4"
+    "node": ">=7.5"
   },
   "dependencies": {
     "expand-home-dir": "0.0.3",
@@ -28,14 +28,18 @@
     "ava": "^0.18.1",
     "coveralls": "^2.11.15",
     "nyc": "^10.1.2",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.6",
     "util.pkgwrap": "0.0.5",
     "xo": "^0.17.1"
   },
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "bin": {
     "blahblahblah": "./cli.js"
   },
   "scripts": {
+    "build": "pkgwrap --build",
     "postinstall": "pkgwrap --postinstall",
     "test": "pkgwrap --testing",
     "report": "pkgwrap --reporting",

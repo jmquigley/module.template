@@ -12,12 +12,12 @@ if (fs.existsSync(unitTestDir)) {
 	fs.mkdirsSync(unitTestDir);
 }
 
-test('Empty, template test case', t => {
+test('Empty, template test case', (t: any) => {
 	console.log(`Using test directory: ${unitTestDir}`);
 	t.pass();
 });
 
-test.after.always('test cleanup', t => {
+test.after.always('test cleanup', (t: any) => {
 	fs.removeSync(unitTestBaseDir);
 	t.pass();
 });

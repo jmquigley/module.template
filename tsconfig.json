@@ -6,8 +6,10 @@
 		"noImplicitReturns": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
+		"skipLibCheck": true,
 		"sourceMap": true,
-		"strictNullChecks": true,
+		"strictNullChecks": false,
+		"suppressImplicitAnyIndexErrors": true,
 		"module": "commonjs",
 		"target": "es6"
 	}

@@ -34,6 +34,7 @@
     "coveralls": "^2.11.15",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cli": "^1.2.2",
+    "gulp-jsdoc3": "^1.0.1",
     "jsdoc": "^3.4.3",
     "nyc": "^10.1.2",
     "tslint": "^4.4.2",

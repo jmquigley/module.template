@@ -38,7 +38,8 @@
     "jsdoc": "^3.4.3",
     "nyc": "^10.1.2",
     "tslint": "^4.4.2",
-    "typescript": "^2.1.6",
+    "typescript": "^2.2.1",
+    "util.fixture": "0.0.30",
     "util.pkgwrap": "0.0.6",
     "xo": "^0.17.1"
   },

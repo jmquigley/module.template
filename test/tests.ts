@@ -1,23 +1,19 @@
 'use strict';
 
-const path = require('path');
-const fs = require('fs-extra');
-const test = require('ava');
-const uuidV4 = require('uuid/v4');
-const home = require('expand-home-dir');
+import {test} from 'ava';
+import * as fs from 'fs-extra';
+import {Fixture} from 'util.fixture';
 
-let unitTestBaseDir = home(path.join('~/', '.tmp', 'unit-test-data'));
-let unitTestDir = home(path.join(unitTestBaseDir, uuidV4()));
-if (fs.existsSync(unitTestDir)) {
-	fs.mkdirsSync(unitTestDir);
-}
-
-test('Empty, template test case', (t: any) => {
-	console.log(`Using test directory: ${unitTestDir}`);
-	t.pass();
+test.after.always((t: any) => {
+	console.log('final cleanup: {module name}');
+	let directories = Fixture.cleanup();
+	directories.forEach((directory: string) => {
+		t.false(fs.existsSync(directory));
+	});
 });
 
-test.after.always('test cleanup', (t: any) => {
-	fs.removeSync(unitTestBaseDir);
+test('Empty, template test case', (t: any) => {
+	let fixture = new Fixture();
+	console.log(`Using test directory: ${fixture.dir}`);
 	t.pass();
 });

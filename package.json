@@ -32,9 +32,12 @@
   "devDependencies": {
     "ava": "^0.18.1",
     "coveralls": "^2.11.15",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
+    "gulp-jsdoc-to-markdown": "^1.2.2",
     "gulp-jsdoc3": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
     "jsdoc": "^3.4.3",
     "nyc": "^10.1.2",
     "tslint": "^4.4.2",
@@ -49,6 +52,7 @@
     "blahblahblah": "./cli.js"
   },
   "scripts": {
+    "all": "npm run build && npm test && npm run report",
     "build": "./node_modules/.bin/pkgwrap --build && npm run docs",
     "coverage": "./node_modules/.bin/pkgwrap --coverage",
     "docs": "./node_modules/.bin/gulp docs",
@@ -56,28 +60,7 @@
     "report": "./node_modules/.bin/pkgwrap --reporting",
     "test": "./node_modules/.bin/pkgwrap --testing"
   },
-  "xo": {
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true
-    },
-    "global": [
-      "window",
-      "JSON"
-    ],
-    "rules": {
-      "space-before-function-paren": "off",
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "snakeCase"
-        }
-      ],
-      "arrow-parens": [
-        "error",
-        "as-needed"
-      ]
-    }
+  "ava": {
+    "concurrency": 5
   }
 }

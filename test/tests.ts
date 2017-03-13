@@ -1,9 +1,9 @@
 'use strict';
 
 import * as assert from 'assert';
+import * as fs from 'fs-extra';
 import {Fixture} from 'util.fixture';
 import {debug} from './helpers';
-import * as fs from 'fs-extra';
 
 describe('Executing test suite', () => {
 

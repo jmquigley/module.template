@@ -53,7 +53,7 @@
     "blahblahblah": "./cli.js"
   },
   "scripts": {
-    "all": "npm run lint && npm run build && npm test && npm run report",
+    "all": "npm install && npm run lint && npm run build && npm test && npm run report",
     "build": "./node_modules/.bin/pkgwrap --build && npm run docs",
     "coverage": "./node_modules/.bin/pkgwrap --coverage",
     "docs": "./node_modules/.bin/gulp docs",

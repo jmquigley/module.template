@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Simple JavaScript/NPM Copypasta for a single module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "bin": {
+    "blahblahblah": "./cli.js"
+  },
   "private": false,
   "license": "MIT",
   "repository": {
@@ -13,43 +18,51 @@
     "url": "https://github.com/jmquigley/module.template/issues"
   },
   "engines": {
-    "node": ">=7.5"
+    "node": ">=7.x"
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "util.rstrip": "0.0.28",
+    "util.rstrip": "0.0.32",
     "uuid": "^3.1.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
     "@types/fs-extra": "4.0.5",
-    "@types/lodash": "^4.14.85",
+    "@types/lodash": "^4.14.87",
     "@types/mocha": "^2.2.44",
-    "@types/node": "^8.0.53",
+    "@types/node": "^8.0.54",
     "@types/uuid": "^3.4.3",
     "@types/yargs": "^8.0.2",
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "coveralls": "^3.0.0",
     "fs-extra": "^4.0.2",
     "nyc": "^11.3.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "util.fixture": "0.0.59",
-    "util.pkgwrap": "0.0.73"
+    "typescript": "^2.6.2",
+    "util.fixture": "0.0.61",
+    "util.pkgwrap": "^0.0.88"
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "bin": {
-    "blahblahblah": "./cli.js"
+  "pkgwrap": {
+    "cleanup": [
+      "index.d.ts",
+      "index.js",
+      "test.d.ts",
+      "test.js",
+      "bin/**/*.js",
+      "bin/**/*.d.ts",
+      "lib/**/*.js",
+      "lib/**/*.jsx",
+      "lib/**/*.d.ts"
+    ]
   },
   "scripts": {
-    "all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn run docs && yarn test && yarn run report",
-    "build": "pkgwrap --build",
+    "all": "yarn install && yarn run build && yarn run docs && yarn test && yarn run report",
+    "build": "yarn run clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
     "docs": "pkgwrap --docs",
     "lint": "pkgwrap --lint",
-    "postinstall": "pkgwrap --postinstall",
+    "prepublishOnly": "yarn run all",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava"
   }

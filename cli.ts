@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict";
 
-console.log('CLI template');
+console.log("CLI template");

@@ -1,6 +1,6 @@
 {
 	"name": "template",
-	"version": "0.0.4",
+	"version": "0.0.1",
 	"author": "jmquigley <jmquigley@outlook.com>",
 	"description": "Simple JavaScript/NPM Copypasta for a single module",
 	"private": false,

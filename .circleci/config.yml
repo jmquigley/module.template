@@ -1,7 +1,12 @@
+#
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+# The docker images available for this configuration are found on dockerhub @
+# https://hub.docker.com/r/circleci/node
+#
+
 version: 2
 
 defaults: &defaults

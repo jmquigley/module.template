@@ -3,9 +3,11 @@ const webpack = require("webpack");
 const pkg = require("./package.json");
 
 let mode = process.env.NODE_ENV || "development";
+const externals = Object.keys(pkg.dependencies);
 
 module.exports = {
 	mode,
+	target: "node",
 	performance: {hints: false},
 	entry: [path.resolve(__dirname, "index.js")],
 	output: {
@@ -17,6 +19,7 @@ module.exports = {
 	resolve: {
 		extensions: [".js", ".css"]
 	},
+	externals,
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},

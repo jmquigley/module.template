@@ -12,7 +12,7 @@ version: 2
 defaults: &defaults
     working_directory: ~/repo
     docker:
-        - image: circleci/node:11.14.0-stretch
+        - image: circleci/node
 
 jobs:
     build:

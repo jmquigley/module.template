@@ -1,4 +1,4 @@
-name: module.template workflow
+name: deploy
 
 on:
     push:

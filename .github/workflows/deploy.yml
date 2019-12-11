@@ -3,7 +3,7 @@ name: deploy
 on:
     push:
         tags:
-            - /^v\d+\.\d+\.\d+(-[\.\w]+)?/
+            - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
     build:
@@ -11,7 +11,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [8.x, 10.x, 12.x]
+                node-version: [12.x]
 
         steps:
             - uses: actions/checkout@master
@@ -21,6 +21,13 @@ jobs:
                   version: ${{ matrix.node-version }}
             - run: npm install -g yarn@1.19.2
             - run: yarn all
-            - run: npm publish
+            - name: npm publish
+              run: |
+                  npm set init.author.name "${NPM_USER}"
+                  npm set init.author.email "${NPM_EMAIL}"
+                  npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+                  npm publish
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  NPM_USER: ${{ secrets.NPM_USER }}
+                  NPM_EMAIL: ${{ secrets.NPM_EMAIL }}

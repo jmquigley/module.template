@@ -44,10 +44,8 @@ coverage
 dist
 docs
 highlights
-node_modules
 vendor
 
-*.min.js
 *.tgz
 *.js
 *.js.map

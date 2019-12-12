@@ -30,7 +30,7 @@
 	],
 	"dependencies": {
 		"lodash": "^4.17.15",
-		"util.rstrip": "0.0.54",
+		"util.rstrip": "0.0.57",
 		"uuid": "^3.3.3",
 		"yargs": "^15.0.2"
 	},

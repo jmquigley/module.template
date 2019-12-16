@@ -7589,10 +7589,10 @@ util.rstrip@0.0.53:
   resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.53.tgz#e97ead48cfafebc7c9d2a15bf0521e2696b7a9d9"
   integrity sha512-rFyHg476jt1O9xETXeAvYSp5qpW/MOamiUCRWFWkrRAWrz4DzR85qIhyTNe0tMdGzj9uzYsBlURmr5Y3iVMr8w==
 
-util.rstrip@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.54.tgz#c8f0b8ea16d877ad0d69444551072e0132b2f746"
-  integrity sha512-kXlBVb/Sove6oCA1WyGqGP6DLiZla+BmDDDeeg8xozTwh72d6XT9Z3gW3eceVz856jjCwvo1lD/uiPpixndHzg==
+util.rstrip@0.0.57:
+  version "0.0.57"
+  resolved "https://registry.yarnpkg.com/util.rstrip/-/util.rstrip-0.0.57.tgz#04d96d275a44e4cca591f4d3f89df3fe378e2964"
+  integrity sha512-rmNY7OXPyO2nvFWeHI5SXpfok3eilIlxApFctq4d1SNTyetkwxv/VsIBkDGPxkA5++PAWqsFLB1wOlquGMAm0A==
 
 util.toolbox@0.0.74:
   version "0.0.74"
